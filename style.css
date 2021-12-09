@@ -1,0 +1,130 @@
+*{
+    font-family: "San Francisco";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+/* variables */
+:root{
+    --primaryColor : #6d28d9;
+    --secondaryColor : #ede9fe;
+    --mainWhite : #fff;
+    --mainBlack : #222;
+    --mainGray : #7c7c7c;
+    --mainSpacing : 0.1rem;
+    --mainTransition :all 0.3s linear;
+    --mainRed : #db2777;
+    --bodyColor : #f6f6f6;
+}
+body{
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    color: var(--mainGray);
+    background-color: var(--mainBlack);
+    
+}
+header{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+}
+form input{
+    flex: 1;
+}
+.todo-container{
+    width: 25rem;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    background-color: white;    
+}
+form input , form button{
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+form button{
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3 ease-in-out;
+}
+form button:hover{
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+.todo{
+    display: flex;
+    color: var(--secondaryColor);
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.3rem 0;
+    transition: all 0.3 ease;
+}
+.todo li{
+    flex: 1;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+.todo span{
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.fa-trash-alt{
+    color: var(--mainRed);
+    
+}
+.fa-check-square{
+    color: var(--primaryColor);
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+select{
+    appearance: none;
+    padding:0.5rem;
+    color: var(--primaryColor);
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.select{
+    cursor: pointer;
+    padding-left: 1rem;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    width: 10rem;
+    display: ;
+}
+.select::after{
+    content: "\25BC";
+    top: 0;
+    right: 0;
+    position: absolute;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    pointer-events: none;
+}
+.counter, span{
+    color: var(--mainRed);
+    font-weight: bold;
+    padding: 0;
+    margin-top: 0;
+
+}
